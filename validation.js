@@ -34,11 +34,7 @@ function validate() {
     alert("Thank you for Signing");
     document.write("<h1><center>User_Login Details</center></h1>");
     document.write("<br><br>")
-    document.write(" <b> Username : </b> " + username)
-    document.write("<br><br>")
-    document.write(" <b> Password : </b> " + password)
-    document.write("<br><br>")
-    document.write(" <b> Confirm Password : </b> " + cmpassword)
+    document.write(" <b> Hello Mr.<b>" + username);
     document.write("<br><br>")
     document.write("<h1><center>You are Signed-In Successfully!!</center></h1>")
 }
