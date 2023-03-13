@@ -61,7 +61,7 @@
     <h1>
         <center> CANDIDATE REGISTRATION FORM</center>
     </h1>
-    <form name="inpform" method="post" action="">
+    <form name="inpform" method="post" action="" onsubmit="return check()">
         <img src="asset/reg-removebg-preview.png">
         <label>Candidate name</label>
         <input type="text" name="name" placeholder="Enter your name"><br><br>
@@ -104,7 +104,7 @@
         <input type="tel" name="mobile"><br><br>
         <label>E-mail ID</label>
         <input type="email" name="mail"><br><br>
-        <button type="submit" onclick="check()">SUBMIT</button>
+        <button type="submit">SUBMIT</button>
         <button type="reset">CLEAR</button>
     </form>
     <script src="response.js"></script>

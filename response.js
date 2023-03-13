@@ -129,7 +129,6 @@ function check() {
     if (fre) {
         document.write("French");
     }
-    document.write(" , ");
     document.write("<br><br>");
     document.write(" <b> Address : </b> " + address);
     document.write("<br><br>");
