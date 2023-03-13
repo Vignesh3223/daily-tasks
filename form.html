@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Information</title>
+    <style>
+        h1 {
+            font-family: algerian;
+            font-size: xx-large;
+            font-weight: bolder;
+            text-decoration: double;
+            text-decoration-line: underline;
+            text-decoration-color: black;
+            color: rgb(216, 252, 12);
+        }
+
+        form {
+            border-style: dashed;
+            border-color: black;
+            padding: 30px;
+            padding-bottom: 50px;
+            font-family: 'Times New Roman';
+            font-size: large;
+            font-weight: 300;
+            background: #085078;
+            background: -webkit-linear-gradient(to right, #85D8CE, #085078);
+            background: linear-gradient(to right, #85D8CE, #085078);
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        label {
+            font-family: 'Times New Roman';
+            font-weight: bold;
+            color: blue;
+        }
+
+        img {
+            position: absolute;
+            top: 100px;
+            left: 1200px;
+            height: 800px;
+            width: 400px;
+
+        }
+
+        body {
+            background: #4776E6;
+            background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+            background: linear-gradient(to right, #8E54E9, #4776E6);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <center> CANDIDATE REGISTRATION FORM</center>
+    </h1>
+    <form name="inpform" method="post" action="">
+        <img src="asset/reg-removebg-preview.png">
+        <label>Candidate name</label>
+        <input type="text" name="name" placeholder="Enter your name"><br><br>
+        <label>Date of Birth</label>
+        <input type="date" name="dob"><br><br>
+        <label>Gender</label><br>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female<br><br>
+        <label>Qualification</label><br>
+        <input type="radio" name="qualify" value="diploma">Diploma<br>
+        <input type="radio" name="qualify" value="ug">Under Graduate<br>
+        <input type="radio" name="qualify" value="pg">Post Graduate<br>
+        <input type="radio" name="qualify" value="prof">Professional<br><br>
+        <label>Marks Secured</label>
+        <input type="text" name="marks"><br><br>
+        <label>Grade</label><br>
+        <select name="grade">Grade
+            <option>Choose grade</option>
+            <option>A+</option>
+            <option>A</option>
+            <option>B+</option>
+            <option>B</option>
+            <option>C+</option>
+            <option>C</option>
+            <option>D</option>
+            <option>E</option>
+        </select><br><br>
+        <label>Languages Known</label><br>
+        <input type="checkbox" name="eng">English<br>
+        <input type="checkbox" name="tam">Tamil<br>
+        <input type="checkbox" name="hin">Hindi<br>
+        <input type="checkbox" name="tel">Telugu<br>
+        <input type="checkbox" name="mal">Malayalam<br>
+        <input type="checkbox" name="kan">Kannada<br>
+        <input type="checkbox" name="urdu">Urdu<br>
+        <input type="checkbox" name="fre">French<br><br>
+        <label>Address</label>
+        <textarea rows="5" cols="50" name="addre"></textarea><br><br>
+        <label>Conatct number</label>
+        <input type="tel" name="mobile"><br><br>
+        <label>E-mail ID</label>
+        <input type="email" name="mail"><br><br>
+        <button type="submit" onclick="check()">SUBMIT</button>
+        <button type="reset">CLEAR</button>
+    </form>
+    <script src="response.js"></script>
+</body>
+
+</html>
