@@ -17,48 +17,79 @@
                 this.stock = stock;
                 this.price = price;
             }
-        }
-        get stock(){
-            return (this.stock);
-        }
-        display() {
-            console.log("Product code : " + procode);
-            console.log("Product name : " + proname);
-            console.log("Stock value : " + stock);
-            console.log("Price : " + price);
+            display() {
+                document.write("<h1><center><b>Product Details</b></center></h1>");
+                document.write("Product code : " + this.procode);
+                document.write("<br><br>");
+                document.write("Product name : " + this.proname);
+                document.write("<br><br>");
+                document.write("Stock value : " + this.stock);
+                document.write("<br><br>");
+                document.write("Price : " + this.price);
+                document.write("<br><br>");
+            }
         }
         class Activity extends Product {
-            constructor(procode, proname, stock, price, custname, quantitysold, total) {
+            constructor(procode, proname, stock, price, custname, quantitysold) {
                 super(procode, proname, stock, price);
                 this.custname = custname;
                 this.quantitysold = quantitysold;
-                this.total = total;
+            }
+            total = 0;
+            Sales() {
+                document.write("<h1><center><b>Before Sales</b></center></h1>");
+                document.write("Product code : " + this.procode);
+                document.write("<br><br>");
+                document.write("Product name : " + this.proname);
+                document.write("<br><br>");
+                document.write("Stock value : " + this.stock);
+                document.write("<br><br>");
+                document.write("Price : " + this.price);
+                document.write("<br><br>");
+                document.write("<h1><center><b>After Sales</b></center></h1>");
+                document.write("Product code : " + this.procode);
+                document.write("<br><br>");
+                document.write("Quantity sold : " + this.quantitysold);
+                document.write("<br><br>");
+                if (this.stock == 0) {
+                    document.write("There is no stock");
+                    document.write("<br><br>");
+                }
+                else if (this.stock < this.quantitysold) {
+                    document.write("The remaining quantity is " + this.stock + " ,it can be sold");
+                    document.write("<br><br>");
+                    this.total = this.price * this.stock;
+                    document.write("Total amount : " + this.total);
+                    document.write("<br><br>");
+                }
+                else {
+                    document.write("There is the enough quantity of the product");
+                    document.write("<br><br>");
+                    this.total = this.quantitysold * this.price;
+                    document.write("Total amount : " + this.total);
+                    document.write("<br><br>");
+                    this.stock = this.stock - this.quantitysold;
+                    document.write("Remaining stock : " + this.stock);
+                    document.write("<br><br>");
+                    document.write("<hr>");
+                }
+            }
+            print() {
+                document.write("<h1><center><b>Activity Class Details</b></center></h1>");
+                super.display();
+                document.write("<br><br>");
+                document.write("<h1><center><b>Customer Details</b></center></h1>");
+                document.write("Customer name : " + this.custname);
+                document.write("<br><br>");
+                document.write("Quantity sold : " + this.quantitysold);
+                document.write("<br><br>");
+                document.write("<hr>");
             }
         }
-        Sales(){
-        console.log("Product code : " + this.procode);
-        console.log("Quantity sold : " + this.quantitysold);
-        total = this.quantitysold * this.price;
-        stock = this.stock - this.quantitysold;
-        if (stock == 0) {
-            console.log("There is no stock");
-        }
-        else if (stock < 0) {
-            document.write("The remaining quantity is " + this.stock + " ,it can be sold");
-        }
-        else {
-            document.write("There is the enough quantity of the product");
-        }
-    }
-        print(){
-            super.display();
-            console.log("Customer name : " + this.custname);
-            console.log("Quantity sold : " + this.quantitysold);
-            console.log("Total amount : " + this.total);
-            console.log("Remaining stock : " + this.stock);
-        }
-        var a = new Activity(101, 'Apple', 40, 30, 'Rahul', 25);
-        a.print();
+        var obj = new Activity(101, 'Apple', 40, 30, 'Rahul', 25);
+        obj.display();
+        obj.Sales();
+        obj.print();
     </script>
 </body>
 
