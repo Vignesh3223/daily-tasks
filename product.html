@@ -39,13 +39,13 @@
         return ("Quantity sold : " + this.quantitysold);
         total = this.quantitysold * this.price;
         stock = this.stock - this.quantitysold;
-        if(stock == 0){
+        if (stock == 0) {
             document.write("There is no stock");
         }
-        else if(stock < 0){
+        else if (stock < 0) {
             document.write("The remaining quantity is " + this.stock + " ,it can be sold");
         }
-        else{
+        else {
             document.write("There is the enough quantity of the product");
         }
         print(){
@@ -55,7 +55,7 @@
             document.write("Total amount : " + this.total);
             document.write("Remaining stock : " + this.stock);
         }
-        var a = new Activity(101, 'Apple', 40 , 30 , 'Rahul', 25);
+        var a = new Activity(101, 'Apple', 40, 30, 'Rahul', 25);
         a.print();
     </script>
 </body>
