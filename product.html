@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+
+<body>
+    <script>
+        class Product {
+            constructor(procode, proname, stock, price) {
+                this.procode = procode;
+                this.proname = proname;
+                this.stock = stock;
+                this.price = price;
+            }
+        }
+        getstock()
+        return (this.stock);
+        display() {
+            document.write("Product code : " + this.procode);
+            document.write("Product name : " + this.proname);
+            document.write("Stock value : " + this.stock);
+            document.write("Price : " + this.price);
+        }
+        class Activity extends Product {
+            constructor(procode, proname, stock, price, custname, quantitysold, total) {
+                super(procode, proname, stock, price);
+                this.custname = custname;
+                this.quantitysold = quantitysold;
+                this.total = total;
+            }
+        }
+        Sales()
+        return ("Product code : " + this.procode);
+        return ("Quantity sold : " + this.quantitysold);
+        total = this.quantitysold * this.price;
+        stock = this.stock - this.quantitysold;
+        if(stock == 0){
+            document.write("There is no stock");
+        }
+        else if(stock < 0){
+            document.write("The remaining quantity is " + this.stock + " ,it can be sold");
+        }
+        else{
+            document.write("There is the enough quantity of the product");
+        }
+        print(){
+            super.display();
+            document.write("Customer name : " + this.custname);
+            document.write("Quantity sold : " + this.quantitysold);
+            document.write("Total amount : " + this.total);
+            document.write("Remaining stock : " + this.stock);
+        }
+        var a = new Activity(101, 'Apple', 40 , 30 , 'Rahul', 25);
+        a.print();
+    </script>
+</body>
+
+</html>
