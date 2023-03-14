@@ -18,13 +18,14 @@
                 this.price = price;
             }
         }
-        getstock()
-        return (this.stock);
+        get stock(){
+            return (this.stock);
+        }
         display() {
-            document.write("Product code : " + this.procode);
-            document.write("Product name : " + this.proname);
-            document.write("Stock value : " + this.stock);
-            document.write("Price : " + this.price);
+            console.log("Product code : " + procode);
+            console.log("Product name : " + proname);
+            console.log("Stock value : " + stock);
+            console.log("Price : " + price);
         }
         class Activity extends Product {
             constructor(procode, proname, stock, price, custname, quantitysold, total) {
@@ -34,13 +35,13 @@
                 this.total = total;
             }
         }
-        Sales()
-        return ("Product code : " + this.procode);
-        return ("Quantity sold : " + this.quantitysold);
+        Sales(){
+        console.log("Product code : " + this.procode);
+        console.log("Quantity sold : " + this.quantitysold);
         total = this.quantitysold * this.price;
         stock = this.stock - this.quantitysold;
         if (stock == 0) {
-            document.write("There is no stock");
+            console.log("There is no stock");
         }
         else if (stock < 0) {
             document.write("The remaining quantity is " + this.stock + " ,it can be sold");
@@ -48,12 +49,13 @@
         else {
             document.write("There is the enough quantity of the product");
         }
+    }
         print(){
             super.display();
-            document.write("Customer name : " + this.custname);
-            document.write("Quantity sold : " + this.quantitysold);
-            document.write("Total amount : " + this.total);
-            document.write("Remaining stock : " + this.stock);
+            console.log("Customer name : " + this.custname);
+            console.log("Quantity sold : " + this.quantitysold);
+            console.log("Total amount : " + this.total);
+            console.log("Remaining stock : " + this.stock);
         }
         var a = new Activity(101, 'Apple', 40, 30, 'Rahul', 25);
         a.print();
